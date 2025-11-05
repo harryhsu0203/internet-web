@@ -1,7 +1,7 @@
 services:
   - type: web
     name: internet-web
-    env: static
+    runtime: static
     buildCommand: ""
     staticPublishPath: .
     headers:
