@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>聯絡我們｜凱銓科技商行</title>
+  <meta name="description" content="聯繫我們取得弱電工程規劃與報價，提供監視、門禁、網路、機房與廣播整合服務。">
+  <meta property="og:title" content="聯絡我們｜凱銓科技">
+  <meta property="og:description" content="立即聯繫，獲得專業弱電整合建議。">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="canonical" href="contact.html">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/images/logo.png" alt="凱銓科技 Logo" class="brand-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="brand-text" style="display:none;">
+          <span class="en">KAICHUAN</span>
+          <span class="zh">凱銓科技</span>
+        </div>
+      </a>
+      <nav class="site-nav" aria-label="主選單">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">選單</button>
+        <ul id="nav-list">
+          <li><a href="index.html">首頁</a></li>
+          <li><a href="services.html">服務項目</a></li>
+          <li><a href="projects.html">實績案例</a></li>
+          <li><a href="about.html">關於我們</a></li>
+          <li><a class="btn btn-primary active" href="contact.html">聯絡我們</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="section-title">聯絡我們</h1>
+        <p class="muted">請留下您的需求，我們將儘快與您聯繫。</p>
+
+        <div class="grid" style="grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:20px; margin-top:16px;">
+          <form class="card" action="https://formsubmit.co/sunnyshelai@gmail.com" method="post">
+            <!-- FormSubmit 設定 -->
+            <input type="hidden" name="_subject" value="凱銓科技商行｜網站聯絡表單">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="_honey" style="display:none">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://localhost:8000/thanks.html">
+            <div style="display:grid; gap:12px;">
+              <label>姓名
+                <input required type="text" name="name" placeholder="您的姓名" />
+              </label>
+              <label>Email
+                <input required type="email" name="email" placeholder="example@company.com" />
+              </label>
+              <label>電話
+                <input type="tel" name="phone" placeholder="04-36033088" />
+              </label>
+              <label>需求項目
+                <select name="service">
+                  <option value="cctv">監視系統</option>
+                  <option value="access">門禁對講</option>
+                  <option value="network">網路與機房</option>
+                  <option value="pa-av">公共廣播 / 會議影音</option>
+                  <option value="consult">顧問/其他</option>
+                </select>
+              </label>
+              <label>需求說明
+                <textarea name="message" rows="5" placeholder="請簡述場域、需求與期程…"></textarea>
+              </label>
+              <div>
+                <button class="btn btn-primary" type="submit">送出需求</button>
+              </div>
+            </div>
+          </form>
+
+          <aside class="card">
+            <h3>公司資訊</h3>
+            <p class="muted">凱銓科技商行<br>統編：92304727</p>
+            <p>電話：04-36033088<br>Email：service@example.com</p>
+            <p>地址：台中市東區復興路五段176號</p>
+            <p class="muted">服務時間：週一至週五 09:00–18:00</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <a class="brand" href="index.html">
+          <img src="assets/images/logo.png" alt="凱銓科技 Logo" class="brand-logo" style="height:32px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="brand-text" style="display:none;">
+            <span class="en">KAICHUAN</span>
+            <span class="zh">凱銓科技</span>
+          </div>
+        </a>
+        <p class="muted">© <span id="year"></span> 凱銓科技商行. 版權所有。</p>
+      </div>
+      <nav aria-label="頁尾連結">
+        <ul>
+          <li><a href="about.html">關於</a></li>
+          <li><a href="projects.html">案例</a></li>
+          <li><a href="contact.html">聯絡</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
