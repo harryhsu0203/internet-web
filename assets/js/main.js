@@ -32,10 +32,31 @@ document.addEventListener('DOMContentLoaded', () => {
   if (contactForm) {
     const endpoint = contactForm.dataset.endpoint || '';
     const statusEl = contactForm.querySelector('[data-form-status]');
+    const modal = document.querySelector('[data-form-modal]');
+    const closeBtns = document.querySelectorAll('[data-modal-close]');
 
     if (!endpoint || endpoint.includes('YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL')) {
       if (statusEl) statusEl.textContent = '請先設定表單端點，或改用電話 / LINE 聯絡。';
     } else {
+      const openModal = () => {
+        if (!modal) return;
+        modal.removeAttribute('hidden');
+        requestAnimationFrame(() => modal.classList.add('open'));
+      };
+
+      const closeModal = () => {
+        if (!modal) return;
+        modal.classList.remove('open');
+        modal.setAttribute('hidden', '');
+      };
+
+      closeBtns.forEach(btn => btn.addEventListener('click', closeModal));
+      if (modal) {
+        modal.addEventListener('click', (event) => {
+          if (event.target === modal) closeModal();
+        });
+      }
+
       contactForm.addEventListener('submit', async (event) => {
         event.preventDefault();
        if (statusEl) {
@@ -51,7 +72,11 @@ document.addEventListener('DOMContentLoaded', () => {
           });
 
           if (response.ok) {
-            window.location.href = 'thanks.html';
+            contactForm.reset();
+            if (statusEl) {
+              statusEl.textContent = '已成功送出，我們會盡快聯絡您。';
+            }
+            openModal();
           } else {
             throw new Error(`HTTP ${response.status}`);
           }
