@@ -42,13 +42,8 @@
         <p class="muted">請留下您的需求，我們將儘快與您聯繫。</p>
 
         <div class="grid" style="grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:20px; margin-top:16px;">
-          <form class="card" action="https://formsubmit.co/sunnyshelai@gmail.com" method="post">
-            <!-- FormSubmit 設定 -->
-            <input type="hidden" name="_subject" value="凱銓科技商行｜網站聯絡表單">
-            <input type="hidden" name="_template" value="table">
-            <input type="text" name="_honey" style="display:none">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://localhost:8000/thanks.html">
+          <form class="card" data-contact-form data-endpoint="https://script.google.com/macros/s/YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL/exec">
+            <p class="muted form-status" data-form-status aria-live="polite"></p>
             <div style="display:grid; gap:12px;">
               <label>姓名
                 <input required type="text" name="name" placeholder="您的姓名" />

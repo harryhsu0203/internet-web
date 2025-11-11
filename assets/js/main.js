@@ -26,6 +26,45 @@ document.addEventListener('DOMContentLoaded', () => {
       toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
   }
+
+  // 聯絡表單（Google Apps Script）
+  const contactForm = document.querySelector('[data-contact-form]');
+  if (contactForm) {
+    const endpoint = contactForm.dataset.endpoint || '';
+    const statusEl = contactForm.querySelector('[data-form-status]');
+
+    if (!endpoint || endpoint.includes('YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL')) {
+      if (statusEl) statusEl.textContent = '請先設定表單端點，或改用電話 / LINE 聯絡。';
+    } else {
+      contactForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+       if (statusEl) {
+          statusEl.textContent = '送出中…';
+          statusEl.classList.remove('error');
+        }
+
+        const formData = new FormData(contactForm);
+        try {
+          const response = await fetch(endpoint, {
+            method: 'POST',
+            body: formData,
+          });
+
+          if (response.ok) {
+            window.location.href = 'thanks.html';
+          } else {
+            throw new Error(`HTTP ${response.status}`);
+          }
+        } catch (error) {
+          console.error('表單送出失敗', error);
+          if (statusEl) {
+            statusEl.textContent = '送出失敗，請稍後再試或改用電話 / LINE 聯絡我們。';
+            statusEl.classList.add('error');
+          }
+        }
+      });
+    }
+  }
 });
 
 
