@@ -203,8 +203,27 @@ body{
 .panel-cta .btn{ min-width:180px; text-align:center; }
 
 /* Mode toggle */
-.mode-toggle{ display:inline-flex; gap:8px; padding:6px; border-radius:999px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.2); margin-bottom:12px; }
-.mode-link{ padding:8px 18px; border-radius:999px; text-decoration:none; font-weight:600; color:var(--muted); background:transparent; border:1px solid transparent; transition:.25s ease; }
+.mode-toggle{
+  display:inline-flex;
+  gap:8px;
+  padding:6px;
+  border-radius:999px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.2);
+  margin-bottom:12px;
+  box-shadow:0 8px 24px rgba(212,175,55,.22);
+  position:relative;
+  overflow:hidden;
+}
+.mode-toggle::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg, rgba(244,208,63,.32), rgba(212,175,55,.08));
+  pointer-events:none;
+  opacity:.7;
+}
+.mode-link{ padding:8px 18px; border-radius:999px; text-decoration:none; font-weight:600; color:var(--muted); background:rgba(255,255,255,.35); border:1px solid transparent; transition:.25s ease; position:relative; z-index:1; }
 .mode-link:hover{ color:var(--gold); border-color:rgba(212,175,55,.2); }
 .mode-link.active{ background:var(--gold-gradient); color:var(--primary-ink); border-color:transparent; box-shadow:0 6px 16px rgba(212,175,55,.25); }
 
@@ -233,8 +252,15 @@ body{
 .dev-footer .muted, .dev-footer a{ color:#3f5fa0; }
 .dev-footer a:hover{ color:#1f335d; }
 .dev-header .btn.btn-primary{ color:#0b1631; }
-.dev-theme .mode-toggle{ background:rgba(255,255,255,.25); border:none; box-shadow:0 8px 20px rgba(63,127,255,.2); }
-.dev-theme .mode-link{ color:#365a9f; border-color:transparent; }
+.dev-theme .mode-toggle{
+  background:rgba(255,255,255,.25);
+  border:none;
+  box-shadow:0 10px 26px rgba(63,127,255,.25);
+}
+.dev-theme .mode-toggle::before{
+  background:linear-gradient(135deg, rgba(111,168,255,.35), rgba(63,127,255,.12));
+}
+.dev-theme .mode-link{ color:#365a9f; border-color:transparent; background:rgba(255,255,255,.4); }
 .dev-theme .mode-link:hover{ color:#0b1631; border-color:rgba(63,127,255,.35); }
 .dev-theme .mode-link.active{ background:linear-gradient(135deg,#6fa8ff,#3f7fff); color:#0b1631; box-shadow:0 6px 20px rgba(63,127,255,.35); }
 
