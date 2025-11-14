@@ -1,7 +1,7 @@
 /* 基礎設定 - 亮色主題（白底） */
 :root{
-  --bg:#ffffff;           /* 白色背景 */
-  --beige:#fff7ec;        /* 淡米色點綴 */
+  --bg:#fff6e6;           /* 淡淡金黃色背景 */
+  --beige:#ffeed9;        /* 淺米色點綴 */
   --bg-elev:#ffffff;      /* 浮層/面板底色 */
   --panel:#ffffff;        /* 卡片底色 */
   --line:#e6e8eb;         /* 邊界/分隔線 */
