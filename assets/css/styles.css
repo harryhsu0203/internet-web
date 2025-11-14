@@ -200,6 +200,7 @@ body{
 .dev-theme .btn-primary:hover{ background:linear-gradient(135deg,#8abaff,#5791ff); }
 .dev-theme .btn-ghost{ color:#3f7fff; border-color:rgba(63,127,255,.4); }
 .dev-theme .btn-ghost:hover{ background:rgba(63,127,255,.12); color:#0b1631; }
+.dev-theme .hero-logo{ filter:drop-shadow(0 10px 24px rgba(63,127,255,.35)); }
 .dev-hero{ padding:110px 0 80px; text-align:center; }
 .dev-hero h1{ font-size:clamp(32px,5vw,52px); margin:0 0 16px; color:#10244a; }
 .dev-hero .lead{ color:#4864a4; max-width:720px; margin:0 auto 24px; }
