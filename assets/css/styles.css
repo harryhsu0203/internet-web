@@ -213,6 +213,10 @@ body{
 .dev-footer .muted, .dev-footer a{ color:#3f5fa0; }
 .dev-footer a:hover{ color:#1f335d; }
 .dev-header .btn.btn-primary{ color:#0b1631; }
+.dev-theme .mode-toggle{ background:rgba(255,255,255,.25); border-color:rgba(63,127,255,.35); }
+.dev-theme .mode-link{ color:#365a9f; border-color:transparent; }
+.dev-theme .mode-link:hover{ color:#0b1631; border-color:rgba(63,127,255,.35); }
+.dev-theme .mode-link.active{ background:linear-gradient(135deg,#6fa8ff,#3f7fff); color:#0b1631; box-shadow:0 6px 20px rgba(63,127,255,.35); }
 
 /* Responsive */
 @media (max-width: 840px){
