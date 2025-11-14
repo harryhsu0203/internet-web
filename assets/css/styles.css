@@ -184,6 +184,10 @@ body{
 .panel-cta .btn{ min-width:180px; text-align:center; }
 
 /* Mode toggle */
+.mode-toggle{ display:inline-flex; gap:8px; padding:6px; border-radius:999px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.2); margin-bottom:12px; }
+.mode-link{ padding:8px 18px; border-radius:999px; text-decoration:none; font-weight:600; color:var(--muted); background:transparent; border:1px solid transparent; transition:.25s ease; }
+.mode-link:hover{ color:var(--gold); border-color:rgba(212,175,55,.2); }
+.mode-link.active{ background:var(--gold-gradient); color:var(--primary-ink); border-color:transparent; box-shadow:0 6px 16px rgba(212,175,55,.25); }
 
 
 /* Development theme */
