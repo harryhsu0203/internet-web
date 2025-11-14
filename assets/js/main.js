@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 方案切換
+  // 業務切換
   const serviceToggleButtons = document.querySelectorAll('[data-service-toggle]');
   const servicePanels = document.querySelectorAll('[data-service-panel]');
   if (serviceToggleButtons.length && servicePanels.length) {
