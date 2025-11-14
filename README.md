@@ -24,6 +24,6 @@ python3 -m http.server 8000
 
 - 電話：04-36033088
 - Email：sunnyshelai@gmail.com
-- 地址：台中市東區復興路五段176號
+- 地址：台中市東區復興路五段178號
 - 統編：92304727
 
