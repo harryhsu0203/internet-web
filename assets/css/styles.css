@@ -191,8 +191,8 @@ body{
 
 
 /* Development theme */
-.dev-theme{ background:radial-gradient(1000px 600px at 20% -10%, rgba(118,175,255,.45), transparent 55%), radial-gradient(900px 520px at 80% 0%, rgba(86,132,255,.35), transparent 60%), #f5f8ff; color:#1a2742; }
-.dev-theme .site-header{ background:rgba(255,255,255,.9); border-bottom:1px solid rgba(118,132,255,.25); box-shadow:0 10px 25px rgba(90,130,255,.15); }
+.dev-theme{ background:radial-gradient(1400px 700px at 50% -10%, rgba(111,168,255,.32), transparent 60%), linear-gradient(180deg,#eff5ff 0%, #ffffff 100%); color:#1a2742; }
+.dev-theme .site-header{ background:rgba(255,255,255,.95); border-bottom:1px solid rgba(118,132,255,.2); box-shadow:0 10px 25px rgba(69,111,200,.12); }
 .dev-theme .site-nav a{ color:#1f335d; }
 .dev-theme .site-nav a:hover{ background:rgba(126,163,255,.18); color:#101c35; }
 .dev-theme .site-nav a.active{ background:linear-gradient(135deg,#6fa8ff,#3f7fff); color:#0b1631; }
