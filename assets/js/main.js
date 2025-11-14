@@ -90,6 +90,25 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   }
+
+  // 方案切換
+  const serviceToggleButtons = document.querySelectorAll('[data-service-toggle]');
+  const servicePanels = document.querySelectorAll('[data-service-panel]');
+  if (serviceToggleButtons.length && servicePanels.length) {
+    serviceToggleButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const target = btn.dataset.serviceToggle;
+        serviceToggleButtons.forEach(b => {
+          b.classList.toggle('active', b === btn);
+          b.setAttribute('aria-selected', b === btn ? 'true' : 'false');
+        });
+        servicePanels.forEach(panel => {
+          const isTarget = panel.dataset.servicePanel === target;
+          panel.classList.toggle('active', isTarget);
+        });
+      });
+    });
+  }
 });
 
 

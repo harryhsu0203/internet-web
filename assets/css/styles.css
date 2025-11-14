@@ -187,6 +187,24 @@ form button[type="submit"]{ margin-top:8px; }
 .modal-content p{ margin:0 0 20px; color:var(--muted); }
 .modal-actions{ display:flex; justify-content:center; }
 
+/* Solutions switch */
+.mode-switch{ display:inline-flex; background:var(--bg-elev); border:1px solid var(--line); border-radius:14px; overflow:hidden; box-shadow:0 6px 18px rgba(0,0,0,.08); }
+.mode-switch button{ background:transparent; border:none; padding:12px 24px; color:var(--muted); font-weight:600; cursor:pointer; transition:.25s ease; }
+.mode-switch button:hover{ color:var(--gold); }
+.mode-switch button.active{ background:var(--gold-gradient); color:var(--primary-ink); box-shadow:inset 0 0 10px rgba(0,0,0,.08); }
+
+.service-panel{ display:none; margin-top:28px; border:1px solid var(--line); border-radius:18px; background:var(--bg-elev); padding:28px; box-shadow:0 12px 30px rgba(0,0,0,.08); }
+.service-panel.active{ display:block; }
+.panel-header h2{ margin:0 0 12px; font-size:24px; color:var(--text-dark); }
+.panel-header p{ margin:0 0 24px; color:var(--muted); }
+.panel-grid{ display:grid; gap:20px; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); }
+.panel-grid article{ background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:20px; box-shadow:0 8px 20px rgba(0,0,0,.06); }
+.panel-grid h3{ margin:0 0 12px; font-size:18px; color:var(--text-dark); }
+.panel-grid ul, .panel-grid ol{ margin:0; padding-left:20px; color:var(--text); }
+.panel-grid li{ margin-bottom:8px; }
+.panel-cta{ margin-top:24px; display:flex; flex-wrap:wrap; gap:12px; }
+.panel-cta .btn{ min-width:180px; text-align:center; }
+
 /* Responsive */
 @media (max-width: 840px){
   .site-nav ul{ display:none; position:absolute; right:4%; top:60px; flex-direction:column; background:var(--bg-elev); padding:12px; border-radius:12px; border:1px solid var(--line); width:min(240px, 92%); }
