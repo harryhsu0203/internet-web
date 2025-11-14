@@ -15,6 +15,7 @@
   --gold-dark:#b8941f;    /* 深金色 */
   --gold-gradient:linear-gradient(135deg, #f4d03f 0%, #d4af37 50%, #b8941f 100%);
   --gold-glow:rgba(212, 175, 55, 0.3);
+  --divider:rgba(212, 175, 55, 0.45);
   
   /* 品牌色 */
   --brand-gold:var(--gold);
@@ -69,10 +70,34 @@ body{
 .hero-bg{ position:absolute; inset:0; background:transparent; pointer-events:none; }
 
 /* Sections */
-.section{ padding:64px 0; }
+.section{ position:relative; padding:64px 0; }
 .section-title{ font-size:28px; margin:0 0 24px; letter-spacing:.02em; position:relative; color:var(--text-dark); }
 .section-title::after{ content:''; position:absolute; bottom:-8px; left:0; width:60px; height:3px; background:var(--gold-gradient); border-radius:2px; }
 .center .section-title::after{ left:50%; transform:translateX(-50%); }
+
+.hero::after,
+.dev-hero::after,
+.section::before,
+.section::after,
+.dev-section::before,
+.dev-section::after{
+  content:'';
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  width:min(320px, 70%);
+  height:2px;
+  background:linear-gradient(90deg, transparent, var(--divider) 45%, transparent);
+  border-radius:999px;
+  pointer-events:none;
+  opacity:.9;
+}
+.hero::after{ bottom:0; }
+.dev-hero::after{ bottom:0; }
+.section::before,
+.dev-section::before{ top:0; }
+.section::after,
+.dev-section::after{ bottom:0; }
 
 .grid{ display:grid; gap:16px; }
 .features-grid{ grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); }
@@ -185,7 +210,7 @@ body{
 
 
 /* Development theme */
-.dev-theme{ background:#edf2ff; color:#1a2742; }
+.dev-theme{ background:#edf2ff; color:#1a2742; --divider:rgba(63, 127, 255, 0.45); }
 .dev-theme .site-header{ background:#f4f6ff; border-bottom:1px solid rgba(118,132,255,.2); box-shadow:0 10px 20px rgba(69,111,200,.1); }
 .dev-theme .site-nav a{ color:#1f335d; }
 .dev-theme .site-nav a:hover{ background:rgba(126,163,255,.18); color:#101c35; }
@@ -195,10 +220,10 @@ body{
 .dev-theme .btn-ghost{ color:#3f7fff; border-color:rgba(63,127,255,.4); }
 .dev-theme .btn-ghost:hover{ background:rgba(63,127,255,.12); color:#0b1631; }
 .dev-theme .hero-logo{ filter:drop-shadow(0 10px 24px rgba(63,127,255,.35)); }
-.dev-hero{ padding:110px 0 80px; text-align:center; }
+.dev-hero{ position:relative; padding:110px 0 80px; text-align:center; }
 .dev-hero h1{ font-size:clamp(32px,5vw,52px); margin:0 0 16px; color:#10244a; }
 .dev-hero .lead{ color:#4864a4; max-width:720px; margin:0 auto 24px; }
-.dev-section{ padding:72px 0; background:#edf2ff; }
+.dev-section{ position:relative; padding:72px 0; background:#edf2ff; }
 .dev-grid article{ background:rgba(255,255,255,.92); border:1px solid rgba(118,132,255,.25); box-shadow:0 18px 32px rgba(100,140,255,.18); }
 .dev-grid h3{ color:#15305d; }
 .dev-grid ul{ color:#324f86; }
